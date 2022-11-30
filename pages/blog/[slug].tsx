@@ -11,7 +11,7 @@ const query = groq`
 }
 `;
 
-export default function Post(props) {
+export default function Post(props: any) {
   const { postdata, preview } = props;
 
   const router = useRouter();
@@ -23,7 +23,7 @@ export default function Post(props) {
   return (
     <>
       {posts &&
-        posts.map((post, i) => (
+        posts.map((post: any, i: number) => (
           <article key={i}>
             <h3 className="text-lg"> {post.title} </h3>
             <p className="mt-3">{post.excerpt}</p>
