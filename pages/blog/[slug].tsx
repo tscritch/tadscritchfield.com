@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { getClient } from "@lib/sanity";
 import { groq } from "next-sanity";
+import { GetStaticPaths } from "next";
 
 const query = groq`
 *[_type == "post"] | order(_createdAt desc) {
@@ -42,3 +43,10 @@ export async function getStaticProps({ params, preview = false }: any) {
     revalidate: 10,
   };
 }
+
+export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
+  return {
+    paths: [], //indicates that no page needs be created at build time
+    fallback: "blocking", //indicates the type of fallback
+  };
+};
