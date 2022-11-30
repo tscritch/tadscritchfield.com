@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { getClient, usePreviewSubscription } from "@lib/sanity";
+import { getClient } from "@lib/sanity";
 import { groq } from "next-sanity";
 
 const query = groq`
@@ -12,18 +12,14 @@ const query = groq`
 `;
 
 export default function Post(props: any) {
-  const { postdata, preview } = props;
+  const { postdata } = props;
 
-  const router = useRouter();
+  // const router = useRouter();
 
-  const { data: posts } = usePreviewSubscription(query, {
-    initialData: postdata,
-    enabled: preview || router.query.preview !== undefined,
-  });
   return (
     <>
-      {posts &&
-        posts.map((post: any, i: number) => (
+      {postdata &&
+        postdata.map((post: any, i: number) => (
           <article key={i}>
             <h3 className="text-lg"> {post.title} </h3>
             <p className="mt-3">{post.excerpt}</p>
