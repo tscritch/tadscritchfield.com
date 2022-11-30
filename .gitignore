@@ -5,7 +5,7 @@
 /.pnp
 .pnp.js
 
-/tad-scritchfield-cms/node_modules
+/studio/node_modules
 
 # testing
 /coverage
