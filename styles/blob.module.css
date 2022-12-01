@@ -48,6 +48,20 @@
   @apply bg-cyan-50;
 }
 
+.shapeBlob4 {
+	height: 30%;
+	width: 50%;
+	border-radius: 40% 50% 30% 40%;
+  	animation: 
+		transform 18s ease-in-out infinite both alternate,
+		movement_two 30s ease-in-out infinite both;
+	opacity:.2;
+	position: absolute;
+	left: 0%;
+	top: 0%;
+  @apply bg-pink-400;
+}
+
 
 @keyframes transform
 {

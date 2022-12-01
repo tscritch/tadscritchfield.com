@@ -9,7 +9,7 @@ export default function BlobBackground({ children }: any) {
     <div className="h-full bg-slate-900 flex flex-col items-center justify-center relative overflow-hidden">
       <Head>
         <link
-          href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400&f[]=panchang@800&display=swap"
+          href="https://api.fontshare.com/v2/css?f[]=panchang@500,800&display=swap"
           rel="stylesheet"
         />
       </Head>
@@ -17,6 +17,7 @@ export default function BlobBackground({ children }: any) {
       <div className={styles.shapeBlob} />
       <div className={styles.shapeBlob2} />
       <div className={styles.shapeBlob3} />
+      <div className={styles.shapeBlob4} />
       <div className={styles.blobC} />
 
       <div className="flex-grow z-10">{children}</div>
