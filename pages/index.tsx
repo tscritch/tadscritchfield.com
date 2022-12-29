@@ -9,10 +9,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <button className="mb-20 px-4 py-1 z-10 text-sm font-normal hover:backdrop-blur-md border-slate-100 bg-slate-50 bg-opacity-20 border rounded-full border-opacity-30 transition-all hover:bg-opacity-90 hover:text-slate-800">
-        <p>more</p>
-      </button>
-      <div /> */}
+      <div />
 
       <h1 className="font-bold text-6xl md:text-[12rem] lg:text-[18rem] text-center leading-[0.9] z-10">
         TAD
