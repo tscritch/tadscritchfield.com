@@ -3,6 +3,7 @@ import localFont from "@next/font/local";
 import BlobBackground from "components/blob-background";
 import "../styles/globals.css";
 import { Header } from "components/header";
+import Head from "next/head";
 
 const panchang = localFont({
   src: [
@@ -42,6 +43,9 @@ const panchang = localFont({
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <main className={panchang.className} style={{ height: "100%" }}>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
       <BlobBackground>
         <Header />
         <Component {...pageProps} />
