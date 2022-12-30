@@ -8,7 +8,7 @@ import Head from "next/head";
 const panchang = localFont({
   src: [
     {
-      path: "./fonts/Panchang-ExtraLight.woff2",
+      path: "./fonts/Panchang-Extralight.woff2",
       weight: "200",
       style: "normal",
     },
